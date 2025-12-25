@@ -1,0 +1,211 @@
+/* StudyHub - Online Learning Platform CSS */
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin-bottom: 2rem;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn {
+    border-radius: 30px;
+}
+
+/* Star ratings */
+.star-rating {
+    color: #ffc107;
+}
+
+/* Course cards */
+.course-card {
+    height: 100%;
+}
+
+.course-thumbnail {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Progress bars */
+.progress {
+    height: 10px;
+}
+
+/* Discussion forum */
+.reply-indent {
+    margin-left: 30px;
+}
+
+/* Quiz styles */
+.quiz-question {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+}
+
+.quiz-timer {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #dc3545;
+}
+
+/* Certificate styles */
+.certificate-template {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 3rem;
+    border: 25px solid #5d6d7e;
+    border-image: repeating-linear-gradient(45deg, #5d6d7e, #5d6d7e 10px, transparent 10px, transparent 20px) 25;
+    min-height: 800px;
+}
+
+.certificate-title {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.certificate-content {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.certificate-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 1rem 0;
+    text-transform: uppercase;
+}
+
+.certificate-course {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin: 1rem 0;
+}
+
+.certificate-date {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin: 1rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 2rem 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section .btn {
+        margin-top: 1rem;
+        width: 100%;
+    }
+}
+
+/* Admin dashboard styles */
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #667eea;
+    margin: 0.5rem 0;
+}
+
+.stat-label {
+    color: #6c757d;
+    font-weight: 500;
+}
+
+/* Form styles */
+.form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* Alert styles */
+.alert {
+    border-radius: 10px;
+}
+
+/* Navigation */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+/* Course detail page */
+.course-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-item {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid #667eea;
+    background: #f8f9fa;
+    border-radius: 0 5px 5px 0;
+}
+
+.lesson-item.completed {
+    border-left-color: #28a745;
+    background: #f0fff4;
+}
+
+.lesson-item.current {
+    border-left-color: #ffc107;
+    background: #fff3cd;
+}
+
+/* Quiz timer */
+.quiz-timer-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #dc3545;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    font-weight: bold;
+}
