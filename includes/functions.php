@@ -78,7 +78,7 @@ function getCoursesByCategory($categoryId = null) {
                    (SELECT AVG(rating) FROM reviews WHERE course_id = c.course_id) as avg_rating,
                    (SELECT COUNT(*) FROM reviews WHERE course_id = c.course_id) as review_count
             FROM courses c
-            JOIN users u ON c.instructor_id = u.user_id
+            LEFT JOIN users u ON c.instructor_id = u.user_id
             WHERE c.category_id = ? AND c.is_published = 1
             ORDER BY c.created_at DESC
         ");
@@ -89,7 +89,7 @@ function getCoursesByCategory($categoryId = null) {
                    (SELECT AVG(rating) FROM reviews WHERE course_id = c.course_id) as avg_rating,
                    (SELECT COUNT(*) FROM reviews WHERE course_id = c.course_id) as review_count
             FROM courses c
-            JOIN users u ON c.instructor_id = u.user_id
+            LEFT JOIN users u ON c.instructor_id = u.user_id
             WHERE c.is_published = 1
             ORDER BY c.created_at DESC
         ");

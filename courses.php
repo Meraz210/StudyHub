@@ -230,7 +230,7 @@ switch($sort) {
                                         <div class="mt-auto">
                                             <div class="d-flex justify-content-between align-items-center mb-2">
                                                 <small class="text-muted">
-                                                    <i class="fas fa-user"></i> <?php echo htmlspecialchars($course['first_name'] . ' ' . $course['last_name']); ?>
+                                                    <i class="fas fa-user"></i> <?php echo htmlspecialchars($course['first_name'] ?? 'Unknown Instructor') . ' ' . htmlspecialchars($course['last_name'] ?? ''); ?>
                                                 </small>
                                                 <small class="text-muted">
                                                     <i class="fas fa-star text-warning"></i> 

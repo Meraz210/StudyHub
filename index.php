@@ -47,7 +47,7 @@ $allCourses = getCoursesByCategory();
                     <?php if (isLoggedIn()): ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-                                <i class="fas fa-user"></i> <?php echo $_SESSION['first_name']; ?>
+                                <i class="fas fa-user"></i> <?php echo $_SESSION['first_name'] ?? 'User'; ?>
                             </a>
                             <ul class="dropdown-menu">
                                 <?php if (getCurrentUserRole() === 'student'): ?>
@@ -136,7 +136,7 @@ $allCourses = getCoursesByCategory();
                             <div class="mt-auto">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <small class="text-muted">
-                                        <i class="fas fa-user"></i> <?php echo htmlspecialchars($course['first_name'] . ' ' . $course['last_name']); ?>
+                                        <i class="fas fa-user"></i> <?php echo htmlspecialchars(($course['first_name'] ?? 'Unknown') . ' ' . ($course['last_name'] ?? '')); ?>
                                     </small>
                                     <small class="text-muted">
                                         <i class="fas fa-star text-warning"></i> 
